@@ -38,7 +38,7 @@ with smtplib.SMTP("smtp.gmail.com", 587) as s:
         receiver = worksheet_data[idx][1]
         status = worksheet_data[idx][2]
 
-        if status != "":
+        if status != "" or company == "" or receiver == "":
             continue
 
         body_header = f"Good day {company},\n\n"
