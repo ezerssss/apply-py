@@ -63,4 +63,4 @@ with smtplib.SMTP("smtp.gmail.com", 587) as s:
         print(f"Sent email to {receiver} ✔")
         worksheet.update_cell(idx + 2, 3, "✔")
 
-    print("Finished")
+    print("Completed")
