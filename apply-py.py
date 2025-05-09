@@ -1,5 +1,6 @@
 import os
 import json
+import time
 import gspread
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -62,5 +63,6 @@ with smtplib.SMTP("smtp.gmail.com", 587) as s:
         s.sendmail(SENDER_EMAIL, receiver, msg.as_string())
         print(f"Sent email to {receiver} ✔")
         worksheet.update_cell(idx + 2, 3, "✔")
+        time.sleep(0.5)
 
     print("Completed")
