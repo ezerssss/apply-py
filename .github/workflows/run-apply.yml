@@ -2,7 +2,7 @@ name: Run apply-py.py
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # every 30 minutes
+    - cron: '0,30 0-7 * * *'  # every 30 minutes between 8AM and 3PM UTC+8
   workflow_dispatch:  # allows manual trigger
   push:
     branches: [main]
